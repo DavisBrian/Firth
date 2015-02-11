@@ -1,0 +1,12 @@
+Package: Firth
+Type: Package
+Title: Firth Test
+Version: 0.1
+Date: 2015-02-06
+Author: Brian Davis [aut, cre]
+Maintainer: Brian Davis <Brian.Davis@uth.tmc.edu>
+Description: This run the Firth test over a genotype matrix.
+Depends:
+    R (>= 3.0.3)
+License: MIT
+LazyData: true
