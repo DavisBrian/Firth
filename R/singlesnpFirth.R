@@ -21,11 +21,10 @@
 #' for the SNP identifier is found.  See Details.
 #' 
 #' @details This function is a wrapper for the logistf function in the logistf
-#' package used in the Firth test.
+#' package used in the Firth test. \code{\link[logistf]{logistf}}
 #' 
 #' @return Results of the Firth test in a RAREMETAL friendly format.
 #'   
-#' @import logistf
 #' @export
 singlesnpFirth <- function(formula, data, Z, snpinfo=NULL, snpNames=NULL, refCol=NULL, altCol=NULL) {
   
@@ -80,7 +79,7 @@ singlesnpFirth <- function(formula, data, Z, snpinfo=NULL, snpNames=NULL, refCol
   snp_idx <- ncol(mf)+1
   
   for (i in mac_idx) {
-    f1 <- logistf(update.formula(formula, paste("~ .", colnames(Z)[i], sep="+")), data=dat)
+    f1 <- logistf::logistf(update.formula(formula, paste("~ .", colnames(Z)[i], sep="+")), data=dat)
     res[i, "beta"] <- f1$coefficients[snp_idx]
     res[i, "se"] <- sqrt(f1$var[snp_idx, snp_idx])
     #    res[i, "p"] <- f1$prob[snp_idx]
