@@ -6,12 +6,13 @@ Date: 2015-02-06
 Description: This runs the Firth test over a genotype matrix.
 URL: https://github.com/DavisBrian/Firth
 BugReports: https://github.com/DavisBrian/Firth/issues
-Depends:
-    R (>= 3.0.1)
-Imports:
+Depends: 
+    R (>= 3.1.0)
+Imports: 
     logistf (>= 1.21)
-License: MIT
+License: GPL (>= 2)
 Authors@R: person("Brian", "Davis", email = "Brian.Davis@uth.tmc.edu",
                   role = c("aut", "cre"))
 Maintainer: Brian Davis <Brian.Davis@uth.tmc.edu>
 LazyData: true
+Suggests: testthat

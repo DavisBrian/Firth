@@ -1,2 +1,10 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^firth_example.R$
+^\.travis\.yml$
+^README.Rmd$
+^NEWS.Rmd$
+^NEWS.md$
+^NEWS.html
+^cran-comments\.md$
+^*.gz$

@@ -13,7 +13,6 @@
 #' 
 #' @return a genotype matrix (dosage matrix)
 #'   
-#' @export
 imputeToMean <- function(Z) {
   
   if (!is.matrix(Z)) {

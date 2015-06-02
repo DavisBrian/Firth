@@ -12,7 +12,6 @@
 #' 
 #' @return a recoded genotype matrix (dosage matrix)
 #'   
-#' @export
 codeToMinor <- function(Z) {
   
   if (!is.matrix(Z)) {
