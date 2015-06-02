@@ -1,9 +1,9 @@
 Package: Firth
 Type: Package
 Title: Firth Test
-Version: 0.1.2
+Version: 0.1.3
 Date: 2015-02-06
-Description: This runs the Firth test over a genotype matrix.
+Description: Computes necessary information to analyze single snp and region-based Firth tests for rare genetic variants.
 URL: https://github.com/DavisBrian/Firth
 BugReports: https://github.com/DavisBrian/Firth/issues
 Depends: 
