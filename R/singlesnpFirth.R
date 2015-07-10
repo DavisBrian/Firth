@@ -63,15 +63,16 @@ singlesnpFirth <- function(formula, data, Z, snpinfo=NULL, snpNames=NULL, refCol
   cases <- names(y)[y == 1]
   controls <- names(y)[y == 0] 
   
-  cols <- c("snpName", "p", "beta", "se", "MAF", "MAC", "MACcase", "MACcontrol")
+  cols <- c("snpName", "p", "beta", "se", "MAF", "MAC", "MACcase", "MACcontrol", ".firthName")
   res <- data.frame(matrix(NA, nrow=ncol(Z), ncol=length(cols), dimnames=list(colnames(Z), cols)))
   res[ , "snpName"] <- colnames(Z)
+  res[ , ".firthName"] <- paste0("firthName", 1:length(colnames(Z)))
   res[ , "MAF"] <- colMeans(Z, na.rm=TRUE)/2
   res[ , "MAC"] <- colSums(Z, na.rm=TRUE)
   res[ , "MACcase"] <- colSums(Z[cases, ], na.rm=TRUE)
   res[ , "MACcontrol"] <- colSums(Z[controls, ], na.rm=TRUE) 
   
-  colnames(Z) <- gsub("[^[:alnum:]]", "_", colnames(Z))
+  colnames(Z) <-  res[ , ".firthName"]
   
   mac_idx <- which(res$MAC > 0L)
   
